@@ -29,9 +29,9 @@ Training the model is handled by the `SemNE.py` script which provides the follow
 
 | Command    | Type | Description             | Default                              |
 | ---------- | ---- | ----------------------- | ------------------------------------ |
-| --input    | STR  | Input graph path.       | Default is "graph/ECCI.txt"          |
-| --semantic | STR  | Input semantic path.    | Default is "graph/ECCI.index.txt"    |
-| --output   | STR  | Output embeddings path. | Default is "emb/ECCI_embedding.txt"  |
+| --input    | STR  | Input graph path.       | Default is `graph/ECCI.txt`          |
+| --semantic | STR  | Input semantic path.    | Default is `graph/ECCI.index.txt`    |
+| --output   | STR  | Output embeddings path. | Default is `emb/ECCI_embedding.txt`  |
 
 ## Random walk options in node2vec
 
@@ -47,7 +47,7 @@ Training the model is handled by the `SemNE.py` script which provides the follow
 
 | Command      | Type | Description                    | Default               |
 | ------------ | ---- | ------------------------------ | --------------------- |
-| --mode       | STR  | Model for learning embeddings. | Default is "skipgram" |
+| --mode       | STR  | Model for learning embeddings. | Default is `skipgram` |
 | --dimensions | INT  | Number of dimensions.          | Default is 100        |
 | --iter       | INT  | Number of epochs in SGD.       | Default is 10         |
 | --workers    | INT  | Number of parallel threads.    | Default is 8          |
@@ -79,9 +79,9 @@ The pre-trained embeddings of three network should be downloaded to `test/pre-tr
 
 | Command        | Type | Description                 | Default                                              |
 | -------------- | ---- | --------------------------- | ---------------------------------------------------- |
-| --train        | STR  | Input training graph path.  | Default is "../graph/ECCI.txt"                       |
-| --test         | STR  | Input testing graph path.   | Default is "../graph/ECCI.test.txt"                  |
-| --embedding    | STR  | Input embedding file path.  | Default is "pre-trained/ECCI_embedding.txt"          |
+| --train        | STR  | Input training graph path.  | Default is `../graph/ECCI.txt`                       |
+| --test         | STR  | Input testing graph path.   | Default is `../graph/ECCI.test.txt`                  |
+| --embedding    | STR  | Input embedding file path.  | Default is `pre-trained/ECCI_embedding.txt`          |
 | --dimensions   | INT  | Number of dimensions.       | Default is 100                                       |
 | --negative_num | INT  | Ratio of neg-links for ACC. | Default is 1 (equal to the number of positive links) |
 
