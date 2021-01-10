@@ -15,7 +15,7 @@ The code base is implemented in Python 3.6.10. package versions used for develop
 
 # Datasets
 
-The code takes the **edge list** of the network in a ".txt" file. Each row indicates an edge between two nodes separated by a tab. Nodes can be indexed starting with any ID. The network also can be a weighted network. Also, there should be a txt file that contains the semantic of each node. Three network used in our paper are provide in "graph/".
+The code takes the **edge list** of the network in a `.txt` file. Each row indicates an edge between two nodes separated by a tab. Nodes can be indexed starting with any ID. The network also can be a weighted network. Also, there should be a txt file that contains the semantic of each node. Three network used in our paper are provide in `graph/`.
 
 # Download pretrained embedding files
 
@@ -23,7 +23,7 @@ Download pretrained embedding files from [Google Drive](https://drive.google.com
 
 # Training the model
 
-Training the model is handled by the "SemNE.py" script which provides the following command line arguments.
+Training the model is handled by the `SemNE.py` script which provides the following command line arguments.
 
 ## input and output options
 
@@ -59,21 +59,21 @@ Training the model is handled by the "SemNE.py" script which provides the follow
 | --directed   | NULL | Graph is directed.   |
 | --undirected | NULL | Graph is undirected. |
 
-parse.set_defaults(directed=False)  indicates the graph is undirected
-parse.set_defaults(directed=True)  indicates the graph is directed
+`parse.set_defaults(directed=False)`  indicates the graph is undirected
+`parse.set_defaults(directed=True)`  indicates the graph is directed
 
 | Command      | Type | Description         |
 | ------------ | ---- | ------------------- |
 | --weighted   | NULL | Graph is weighted   |
 | --unweighted | NULL | Graph is unweighted |
 
-parse.set_defaults(weighted=False)  indicates the graph is unweighted
-parse.set_defaults(weighted=True)  indicates the graph is weighted
+`parse.set_defaults(weighted=False)`  indicates the graph is unweighted
+`parse.set_defaults(weighted=True)`  indicates the graph is weighted
 
 # Testing the model
 
-Testing the model is handled by the "test/test.py" script which provides the following command line arguments. 
-The embeddings of three network are provided in "test/pre-trained/". It can be used to reproduce the results in the paper.
+Testing the model is handled by the `test/test.py` script which provides the following command line arguments. 
+The embeddings of three network are provided in `test/pre-trained/`. It can be used to reproduce the results in the paper.
 
 | Command        | Type | Description                 | Default                                              |
 | -------------- | ---- | --------------------------- | ---------------------------------------------------- |
@@ -93,7 +93,7 @@ standard hyperparameter setting for training the embeddings on the default datas
 python SemNE.py
 ```
 
-using "cbow" model to train the embeddings on the default dataset.
+using `cbow` model to train the embeddings on the default dataset.
 
 ```
 python SemNE.py --mode cbow [skipgram(default), fasttext]
