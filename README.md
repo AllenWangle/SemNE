@@ -60,6 +60,7 @@ Training the model is handled by the `SemNE.py` script which provides the follow
 | --undirected | NULL | Graph is undirected. |
 
 `parse.set_defaults(directed=False)`  indicates the graph is undirected
+
 `parse.set_defaults(directed=True)`  indicates the graph is directed
 
 | Command      | Type | Description         |
@@ -68,6 +69,7 @@ Training the model is handled by the `SemNE.py` script which provides the follow
 | --unweighted | NULL | Graph is unweighted |
 
 `parse.set_defaults(weighted=False)`  indicates the graph is unweighted
+
 `parse.set_defaults(weighted=True)`  indicates the graph is weighted
 
 # Testing the model
