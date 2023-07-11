@@ -173,8 +173,8 @@ def main(args):
     n_node = len(G_train.nodes())
     
     neg_sample_link = []
-    for edge in tqdm(G_test.edges()):
-        neg_sample_link.append([edge[0], ACC.generate_neg_link(G_test, args.negative_num, edge[0])])
+    for node in tqdm(G_test.nodes()):
+        neg_sample_link.append([node, ACC.generate_neg_link(G_test, args.negative_num, node)])
     np.savetxt("temp/negtive_link.txt", np.asarray(neg_sample_link), fmt="%s", newline="\n", delimiter="\t")
     
     test_edge = utils.read_edges_from_file(args.test)
